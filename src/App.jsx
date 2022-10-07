@@ -1,9 +1,15 @@
+import { Navbar, Footer, MoviesList, SingleMovie } from "./components"
 
 function App() {
-
-
   return (
-   <h2>vodu tv</h2>
+    <main className="h-screen overflow-auto bg-slate-900 text-white ">
+      <section className="container mx-auto">
+        <Navbar />
+        {/* <MoviesList /> */}
+        <SingleMovie />
+      </section>
+      <Footer />
+    </main>
   )
 }
 
