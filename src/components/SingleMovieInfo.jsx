@@ -2,10 +2,10 @@ import React from "react"
 import poster from "../assets/Poster1.jpg"
 import MovieInfo from "./MovieInfo"
 
-const SingleMovie = () => {
+const SingleMovieInfo = () => {
   return (
     <>
-      <section className=" my-20">
+      <section className=" container my-20 mx-auto">
         <div className="flex flex-col items-center justify-center px-8 sm:px-0 lg:flex-row">
           {/* right */}
           <div className="flex items-center justify-center lg:w-1/2 ">
@@ -23,4 +23,4 @@ const SingleMovie = () => {
   )
 }
 
-export default SingleMovie
+export default SingleMovieInfo

@@ -1,15 +1,17 @@
-import { Navbar, Footer, MoviesList, SingleMovie } from "./components"
-
+import { Navbar, Footer } from "./components"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { Home, Error, SingleMovie } from "./pages"
 function App() {
   return (
-    <main className="h-screen overflow-auto bg-slate-900 text-white ">
-      <section className="container mx-auto">
-        <Navbar />
-        {/* <MoviesList /> */}
-        <SingleMovie />
-      </section>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="movie/:id" element={<SingleMovie />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
       <Footer />
-    </main>
+    </BrowserRouter>
   )
 }
 

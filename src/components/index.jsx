@@ -4,7 +4,7 @@ import MovieInfo from "./MovieInfo"
 import MovieRating from "./MovieRating"
 import MoviesList from "./MoviesList"
 import Navbar from "./Navbar"
-import SingleMovie from "./SingleMovie"
+import SingleMovieInfo from "./SingleMovieInfo"
 import Title from "./Title"
 
 export {
@@ -14,6 +14,6 @@ export {
   MovieRating,
   MoviesList,
   Navbar,
-  SingleMovie,
+  SingleMovieInfo,
   Title,
 }

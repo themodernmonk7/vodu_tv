@@ -2,7 +2,7 @@ import React from "react"
 
 const Title = () => {
   return (
-    <section className=" w-full">
+    <section className=" container mx-auto w-full">
       {/* Top section */}
       {/* flex flex-col lg:flex-row justify-center items-center mt-20 lg:space-x-20 space-y-8 px-4 md:px-0 */}
       <div className="mt-20 grid place-items-center gap-10 px-8 lg:grid-cols-2">
