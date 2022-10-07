@@ -10,7 +10,6 @@ const MoviesList = () => {
   return (
     <section className="container my-20 mx-auto grid place-items-center gap-5 sm:grid-cols-2 md:grid-cols-3 md:px-28 lg:grid-cols-4">
       {movies.map((movie) => {
-        console.log(movie)
         const { imdbID: id, Poster, Title, Type, Year } = movie
         return (
           <Link

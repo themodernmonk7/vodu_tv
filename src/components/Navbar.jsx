@@ -1,8 +1,10 @@
 import React from "react"
 import Logo from "./Logo"
 import { AiOutlineSearch } from "react-icons/ai"
+import { useGlobalContext } from "../contex/contex"
 
 const Navbar = () => {
+  const { query, setQuery, error } = useGlobalContext()
   return (
     <nav className="container mx-auto mt-8 flex items-center justify-between md:px-28">
       {/* right */}
@@ -13,10 +15,13 @@ const Navbar = () => {
             <AiOutlineSearch className="pointer-events-none absolute ml-3 h-5 w-5" />{" "}
             <input
               type="text"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
               placeholder="Search for Movies, TV Series, Celebrities & more"
               className="w-full border-none bg-slate-800 py-3 px-4 pr-3 pl-10 text-white  placeholder:text-gray-500 focus:outline-none  focus:ring-2 focus:ring-yellow-400/50 "
             />{" "}
           </div>
+          {error.show && <p className=" text-red-500"> {error.msg} </p>}
         </form>
       </div>
       {/* left */}
