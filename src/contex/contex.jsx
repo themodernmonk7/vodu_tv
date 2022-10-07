@@ -9,14 +9,25 @@ const AppContext = React.createContext()
 const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(true)
   const [movies, setMovies] = useState([])
-  const [error, setError] = useState(false)
+  const [error, setError] = useState({ show: false, msg: "" })
   const [query, setQuery] = useState("batman")
 
   // Fetch movies
   const fetchMovies = async (url) => {
-    const response = await fetch(url)
-    const data = await response.json()
-    console.log(data)
+    setLoading(true)
+    try {
+      const response = await fetch(url)
+      const data = await response.json()
+      if (data.Response === "True") {
+        setLoading(false)
+        setMovies(data.search)
+        setError({ show: false, msg: "" })
+      } else {
+        setError({ show: true, msg: data.Error })
+      }
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   useEffect(() => {
