@@ -4,7 +4,7 @@ import { AiOutlineSearch } from "react-icons/ai"
 
 const Navbar = () => {
   return (
-    <nav className="container mx-auto mt-8 flex items-center justify-between">
+    <nav className="container mx-auto mt-8 flex items-center justify-between md:px-28">
       {/* right */}
       <div className="flex w-full flex-col items-center space-y-4 md:w-2/3 md:flex-row md:space-y-0 md:space-x-16 ">
         <Logo />
