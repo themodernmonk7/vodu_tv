@@ -2,6 +2,7 @@ import React from "react"
 import { Link, useParams } from "react-router-dom"
 import useFetch from "../hook/useFetch"
 import MovieInfo from "./MovieInfo"
+import LoadingSpinner from "./LoadingSpinner"
 
 // No poster url
 const url =
@@ -11,13 +12,11 @@ const SingleMovieInfo = () => {
   const { id } = useParams()
   const { loading, error, data: movie } = useFetch(`&i=${id}`)
 
-  if (loading) {
-    return <h2>Loading...</h2>
-  }
+  if (loading) return <LoadingSpinner />
 
   if (error.show) {
     return (
-      <div className="">
+      <div>
         <h1>{error.msg}</h1>
         <Link to="/">Back to movies</Link>
       </div>
@@ -27,7 +26,7 @@ const SingleMovieInfo = () => {
   const { Poster, Title } = movie
   return (
     <>
-      <section className=" container mx-auto my-5 px-8 sm:px-0">
+      <section className=" container mx-auto my-10 px-8 sm:px-0">
         <div className="flex flex-col items-center justify-center lg:flex-row">
           {/* right */}
           <div className=" flex items-center justify-center lg:w-1/2 ">

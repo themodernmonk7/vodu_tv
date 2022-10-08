@@ -1,15 +1,16 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import { useGlobalContext } from "../contex/contex"
+import LoadingSkeleton from "./LoadingSkeleton"
 
 // No poster url
 const url =
-  'https://upload.wikimedia.org/wikipedia/commons/f/fc/No_picture_available.png'
+  "https://upload.wikimedia.org/wikipedia/commons/f/fc/No_picture_available.png"
 
 const MoviesList = () => {
   const { loading, movies } = useGlobalContext()
   if (loading) {
-    return <h2>Loading...</h2>
+    return <LoadingSkeleton />
   }
   return (
     <section className="container my-20 mx-auto grid place-items-center gap-5 sm:grid-cols-2 md:grid-cols-3 md:px-28 lg:grid-cols-3 xl:grid-cols-4">
@@ -23,7 +24,7 @@ const MoviesList = () => {
           >
             <article>
               <img
-                src={Poster === 'N/A' ? url : Poster}
+                src={Poster === "N/A" ? url : Poster}
                 alt={Title}
                 className="h-full w-full object-cover object-center"
               />

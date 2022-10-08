@@ -28,7 +28,12 @@ const useFetch = (urlParams) => {
   }
 
   useEffect(() => {
-    fetchMovies(`${API_ENDPOINT}${urlParams}`)
+    const timer = setTimeout(() => {
+      fetchMovies(`${API_ENDPOINT}${urlParams}`)
+    }, 1000)
+    return () => {
+      clearTimeout(timer)
+    }
   }, [urlParams])
 
   return { loading, data, error }
