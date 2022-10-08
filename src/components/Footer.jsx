@@ -7,12 +7,15 @@ const Footer = () => {
       <footer className="flex flex-col items-center justify-center space-y-2 bg-slate-800 py-6">
         <Logo />
         <div className="flex flex-col items-center justify-center space-y-4 text-gray-400 sm:flex-row sm:space-y-0 sm:space-x-14">
-          <p>Contact</p>
-          <p>FAQ</p>
-          <p>Terms and Conditions</p>
-          <p>Privacy Policy</p>
+          <a href="#">Contact</a>
+          <a href="#">FAQ</a>
+          <a href="#">Terms and Conditions</a>
+          <a href="#">Privacy Policy</a>
         </div>
-        <p className="pt-2 text-gray-400">2022 Vodutv.com</p>
+        <p className="pt-2 text-gray-400">
+          {" "}
+          &copy; {new Date().getFullYear()} Vodutv.com
+        </p>
       </footer>
     </>
   )

@@ -4,7 +4,7 @@ import { Home, Error, SingleMovie } from "./pages"
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="movie/:id" element={<SingleMovie />} />

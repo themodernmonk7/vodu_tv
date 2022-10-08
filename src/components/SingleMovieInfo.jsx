@@ -1,7 +1,11 @@
 import React from "react"
 import { Link, useParams } from "react-router-dom"
-import useFetch from "../Hook/useFetch"
+import useFetch from "../hook/useFetch"
 import MovieInfo from "./MovieInfo"
+
+// No poster url
+const url =
+  "https://upload.wikimedia.org/wikipedia/commons/f/fc/No_picture_available.png"
 
 const SingleMovieInfo = () => {
   const { id } = useParams()
@@ -20,16 +24,16 @@ const SingleMovieInfo = () => {
     )
   }
 
-  const { Poster } = movie
+  const { Poster, Title } = movie
   return (
     <>
-      <section className=" container my-20 mx-auto">
-        <div className="flex flex-col items-center justify-center px-8 sm:px-0 lg:flex-row">
+      <section className=" container mx-auto my-5 px-8 sm:px-0">
+        <div className="flex flex-col items-center justify-center lg:flex-row">
           {/* right */}
-          <div className="flex items-center justify-center lg:w-1/2 ">
+          <div className=" flex items-center justify-center lg:w-1/2 ">
             <img
-              src={Poster}
-              alt=""
+              src={Poster === "N/A" ? url : Poster}
+              alt={Title}
               className="h-full transform object-cover object-center  shadow-lg shadow-yellow-400/30 transition duration-700 ease-in-out hover:translate-x-12 hover:skew-y-3 lg:w-96"
             />
           </div>

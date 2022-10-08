@@ -9,7 +9,7 @@ const MovieRating = ({ movie }) => {
     <div className="flex justify-start  pt-2 text-gray-400">
       <div className="flex flex-col space-y-1 border-r border-gray-400 pr-5">
         <p className="flex items-center justify-center font-bold text-gray-300 ">
-          {IMDB.Value}
+          {IMDB === undefined ? "N/A" : IMDB.Value}
           <span className="pl-1 text-xs text-yellow-500">
             <BsStarFill />{" "}
           </span>
@@ -21,7 +21,7 @@ const MovieRating = ({ movie }) => {
           <span className="pr-1 text-xs text-red-600">
             <SiRottentomatoes />
           </span>
-          {RottenTomatoes.Value}
+          {RottenTomatoes === undefined ? "N/A" : RottenTomatoes.Value}
         </p>
         <p className="text-xs">Rotten Tomatoes</p>
       </div>

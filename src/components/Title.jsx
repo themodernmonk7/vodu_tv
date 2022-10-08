@@ -7,7 +7,7 @@ const Title = () => {
       {/* flex flex-col lg:flex-row justify-center items-center mt-20 lg:space-x-20 space-y-8 px-4 md:px-0 */}
       <div className="mt-20 grid place-items-center gap-10 px-8 lg:grid-cols-2">
         {/* right */}
-        <div className="  flex items-center justify-center text-3xl font-bold uppercase sm:text-5xl">
+        <div className="  flex items-center justify-center text-3xl font-bold uppercase md:text-5xl">
           <h2 className="">
             {" "}
             <span className="text-yellow-400"> The first</span> online streaming
@@ -17,16 +17,17 @@ const Title = () => {
         {/* left */}
         <div className=" text-sm text-gray-400  ">
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse
-            commodi odio assumenda sunt cupiditate fuga magnam omnis nam
-            praesentium nulla iusto saepe maxime repellendus ipsa earum suscipit
-            deserunt,
+            VODUTV is a free app that helps people find movies and shows they
+            want to watch. We have over 1 million titles and we're adding
+            content daily. You can use our app to browse movies, tv shows,
+            documentaries, anime, cartoons, live streams, music videos and much
+            more!
           </p>
           <br />
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia
-            voluptate quisquam distinctio recusandae illo beatae alias soluta
-            debitis praesentium inventore.
+            VODUTV is a free online video search engine that allows users to
+            find videos based on keywords. Users can search any type of video
+            including movies, music videos, documentaries, short films, etc.
           </p>
         </div>
       </div>

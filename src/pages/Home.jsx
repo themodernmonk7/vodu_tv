@@ -1,8 +1,9 @@
 import React from "react"
-import { Title, MoviesList } from "../components"
+import { Title, MoviesList, Navbar } from "../components"
 const Home = () => {
   return (
     <>
+      <Navbar />
       <Title />
       <MoviesList />
     </>

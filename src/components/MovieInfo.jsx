@@ -3,22 +3,7 @@ import MovieDetails from "./MovieDetails"
 import MovieRating from "./MovieRating"
 
 const MovieInfo = ({ movie }) => {
-  const {
-    Actors,
-    Awards,
-    Country,
-    Director,
-    Genre,
-    Language,
-    Plot,
-    Rated,
-    Ratings,
-    Runtime,
-    Title,
-    Writer,
-    Year,
-    imdbRating,
-  } = movie
+  const { Genre, Plot, Runtime, Title, Year } = movie
   return (
     <div className="my-10 space-y-4 lg:w-1/2 ">
       <h2 className="text-3xl font-bold md:text-5xl">{Title}</h2>
