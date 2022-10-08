@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react"
-import useFetch from "../hook/useFetch"
+import useFetch from "../useFetch"
 
 const AppContext = React.createContext()
 
